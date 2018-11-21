@@ -1,0 +1,26 @@
+{
+  "name": "country-timezone",
+  "version": "1.0.0",
+  "description": "Find timezone based on country ISO code or country name.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mountainfirefly/country-timezone.git"
+  },
+  "keywords": [
+    "javascript",
+    "timezone",
+    "country",
+    "country",
+    "code"
+  ],
+  "author": "mountainfirefly <pankajdcoder@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mountainfirefly/country-timezone/issues"
+  },
+  "homepage": "https://github.com/mountainfirefly/country-timezone#readme"
+}
