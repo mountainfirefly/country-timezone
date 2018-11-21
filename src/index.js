@@ -1,8 +1,8 @@
 var rawData = require('./data.json');
 
-export const getTimezonesWithCountryName = (name) => {
+function getTimezonesWithCountryName(name) {
   const countries = Object.values(rawData)
-  const matchedCountry = countries.find((country) => {
+  const matchedCountry = countries.find(function(country) {
     return country.name === name
   })
 
@@ -13,7 +13,7 @@ export const getTimezonesWithCountryName = (name) => {
   return matchedCountry.timezones
 }
 
-export const getTimezonesWithCountryCode = (code) => {
+function getTimezonesWithCountryCode(name) {
   const matchedCountry = rawData[code]
 
   if (matchedCountry) {
@@ -21,4 +21,9 @@ export const getTimezonesWithCountryCode = (code) => {
   }
 
   return []
+}
+
+module.exports = {
+  getTimezonesWithCountryCode: getTimezonesWithCountryName,
+  getTimezonesWithCountryName: getTimezonesWithCountryName
 }
