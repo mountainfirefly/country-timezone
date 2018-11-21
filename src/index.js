@@ -3,7 +3,8 @@ var rawData = require('./data.json');
 function getTimezonesWithCountryName(name) {
   const countries = Object.values(rawData)
   const matchedCountry = countries.find(function(country) {
-    return country.name === name
+    const removedSpaceName = name.replace(/^\s+|\s+$/g, '');
+    return country.name.toLowerCase() === removedSpaceName.toLowerCase()
   })
 
   if (!matchedCountry) {
@@ -13,7 +14,7 @@ function getTimezonesWithCountryName(name) {
   return matchedCountry.timezones
 }
 
-function getTimezonesWithCountryCode(name) {
+function getTimezonesWithCountryCode(code) {
   const matchedCountry = rawData[code]
 
   if (matchedCountry) {
@@ -24,6 +25,6 @@ function getTimezonesWithCountryCode(name) {
 }
 
 module.exports = {
-  getTimezonesWithCountryCode: getTimezonesWithCountryName,
+  getTimezonesWithCountryCode: getTimezonesWithCountryCode,
   getTimezonesWithCountryName: getTimezonesWithCountryName
 }

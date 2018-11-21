@@ -1,7 +1,7 @@
 {
   "name": "country-timezone",
-  "version": "1.0.0",
-  "description": "Find timezone based on country ISO code or country name.",
+  "version": "1.0.1",
+  "description": "Find timezone based on country code or country name.",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
