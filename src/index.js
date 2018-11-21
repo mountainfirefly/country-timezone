@@ -1,6 +1,10 @@
 var rawData = require('./data.json');
 
 function getTimezonesWithCountryName(name) {
+  if (!name) {
+    return []
+  }
+
   const countries = Object.values(rawData)
   const matchedCountry = countries.find(function(country) {
     const removedSpaceName = name.replace(/^\s+|\s+$/g, '');
@@ -15,6 +19,10 @@ function getTimezonesWithCountryName(name) {
 }
 
 function getTimezonesWithCountryCode(code) {
+  if (!code) {
+    return []
+  }
+
   const matchedCountry = rawData[code]
 
   if (matchedCountry) {
