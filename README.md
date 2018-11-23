@@ -1,5 +1,5 @@
 # country-timezone
-Find timezone based on country IOS code or country name
+Find timezone with country code and country name
 
 #### Install
 ```
