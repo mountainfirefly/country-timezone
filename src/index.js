@@ -7,8 +7,15 @@ function getTimezonesWithCountryName(name) {
 
   const countries = Object.values(rawData)
   const matchedCountry = countries.find(function(country) {
+
     const removedSpaceName = name.replace(/^\s+|\s+$/g, '');
-    return country.name.toLowerCase() === removedSpaceName.toLowerCase()
+    const lowerCountryName = country.name.toLowerCase().trim()
+    const userEnteredCountryName = removedSpaceName.toLowerCase()
+
+    // If user has entered both country name and city name together
+    const nameSplit = name.toLowerCase().split(' ')
+
+    return lowerCountryName === userEnteredCountryName || nameSplit.includes(lowerCountryName)
   })
 
   if (!matchedCountry) {
