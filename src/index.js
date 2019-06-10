@@ -27,7 +27,7 @@ function getTimezones(name) {
     }
 
     // Matching user entered text with cities name
-    const matchCityName = country.cities.find((cityName) => {
+    const matchCityName = country.cities.find(function(cityName) {
       return cityName.toLowerCase() === name.toLowerCase()
     })
 
