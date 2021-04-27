@@ -1,5 +1,5 @@
 {
-  "name": "gl-country-timezone",
+  "name": "country-timezone",
   "version": "1.0.7",
   "description": "Find timezone based on country code or country name.",
   "main": "src/index.js",
